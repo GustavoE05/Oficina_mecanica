@@ -1,0 +1,22 @@
+<div id="<%= dom_id veiculo %>">
+  <p>
+    <strong>Modelo:</strong>
+    <%= veiculo.modelo %>
+  </p>
+
+  <p>
+    <strong>Placa:</strong>
+    <%= veiculo.placa %>
+  </p>
+
+  <p>
+    <strong>Cor:</strong>
+    <%= veiculo.cor %>
+  </p>
+
+  <p>
+    <strong>Dono:</strong>
+    <%= veiculo.cliente.nome if veiculo.cliente %>
+  </p>
+
+</div>

@@ -1,0 +1,27 @@
+<div id="<%= dom_id ordem_servico %>">
+
+  <p>
+    <strong>Cliente:</strong>
+    <%= ordem_servico.cliente.nome %>
+  </p>
+
+  <p>
+    <strong>Veiculo:</strong>
+    <%= ordem_servico.veiculo.modelo %>
+  </p>
+
+  <p>
+    <strong>Equipe:</strong>
+    <%= ordem_servico.equipe.nome %>
+  </p>
+
+  <p>
+  <strong>Data de Criação:</strong>
+  <%= @ordem_servico.created_at %>
+  </p>
+
+  <p>
+    <strong>Conclusao:</strong>
+    <%= ordem_servico.conclusao %>
+  </p>
+</div>

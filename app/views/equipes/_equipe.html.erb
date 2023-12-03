@@ -1,0 +1,21 @@
+<div id="<%= dom_id equipe %>">
+  <p>
+    <strong>Nome:</strong>
+    <%= equipe.nome %>
+  </p>
+
+  <p>
+    <strong>Funcionários:</strong>
+    <ul>
+      <% equipe.funcionarios.each do |funcionario| %>
+          <li><%= funcionario.nome %></li>
+      <% end %>
+    </ul>
+  </p>
+
+  <p>
+    <strong>descrição</strong>
+    <%= equipe.descricao %>
+  </p>
+
+</div>

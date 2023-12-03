@@ -1,0 +1,48 @@
+<%= form_with(model: ordem_servico) do |form| %>
+  <% if ordem_servico.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(ordem_servico.errors.count, "error") %> prohibited this ordem_servico from being saved:</h2>
+      <ul>
+        <% ordem_servico.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :cliente_id, style: "display: block" %>
+    <%= form.collection_select(:cliente_id, Cliente.all, :id, :nome, { prompt: 'Selecione o cliente' }) %>
+  </div>
+
+  <div>
+    <%= form.label :veiculo_id, style: "display: block" %>
+    <%= form.collection_select(:veiculo_id, Veiculo.all, :id, :modelo, { prompt: 'Selecione o veiculo' }) %>
+  </div>
+
+  <div>
+    <%= form.label :equipe_id, style: "display: block" %>
+    <%= form.collection_select(:equipe_id, Equipe.all, :id, :nome, { prompt: 'Selecione a equipe' }) %>
+  </div>
+
+  <!--
+  <div>
+    <%= form.label :servico_id, style: "display: block" %>
+    <%= form.collection_select(:servico_id, Servico.all, :id, :nome, { prompt: 'Selecione o serviço'}) %>
+  </div>
+
+  <div>
+    <%= form.label :part_id, style: "display: block" %>
+    <%= form.collection_select(:part_id, Part.all, :id, :nome, { prompt: 'Selecione a peça'}) %>
+  </div>
+  -->
+
+  <div>
+    <%= form.label :conclusao, style: "display: block" %>
+    <%= form.date_field :conclusao %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
