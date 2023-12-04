@@ -5,12 +5,12 @@
 
 <div>
 <button type="submit">
-  <%= link_to "Edit this part", edit_part_path(@part) %> |
+  <%= link_to "Editar", edit_part_path(@part) %> 
 </button>
 <button type="submit">
-  <%= link_to "Back to parts", parts_path %>
+  <%= link_to "Voltar", parts_path %>
 </button>
 
-  <%= button_to "Destroy this part", @part, method: :delete %>
+  <%= button_to "Excluir", @part, method: :delete %>
 </div>
 </div>

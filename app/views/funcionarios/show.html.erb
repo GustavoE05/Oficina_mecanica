@@ -4,14 +4,10 @@
 <%= render @funcionario %>
 
 <div>
-<button type="submit">
-  <%= link_to "Editar", edit_funcionario_path(@funcionario) %> 
-</button>
-<button type="submit">
+
+<button type="submit" style="margin-left:1vw; margin-top:10.5vw" >
   <%= link_to "Voltar", funcionarios_path %>
 </button>
-
-  <%= button_to "Excluir", @funcionario, method: :delete %>
 
 </div>
 </div>

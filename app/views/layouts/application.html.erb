@@ -14,8 +14,12 @@
     <div class="row-header">
       <div class="col-md-12 d-flex align-items-center justify-content-end p-2">
 
-      <div class="nome-perfil">
-            
+      <div class="nome-perfil mt-5 ">
+        <% if user_signed_in? %>
+          <p style="color: white; font-size:1vw; font-family: Arial, Helvetica, sans-serif;margin-right: 10px;">
+          Olá, <%= current_user.email %>
+          </p>
+        <% end %>
       </div>
 
       <div class="mt-4">  

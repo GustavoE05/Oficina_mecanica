@@ -11,6 +11,9 @@ gem 'sassc-rails', '>= 2.1.0'
 gem 'bootstrap', '~> 5.3.2'
 gem 'jquery-rails'
 
+## postgresql
+gem 'pg', '~> 1.2', '>= 1.2.3'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.1"
 

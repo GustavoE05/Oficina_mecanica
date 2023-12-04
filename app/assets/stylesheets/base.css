@@ -136,33 +136,18 @@ button[type="submit"]{
     margin-bottom: 1.5vw;
 }
 
-#ver {
-    border: solid 2px #FF8C1A;
+.design-info{
+    border: solid 3px #FF8C1A;
+    margin-left: 2vw;
+    margin-top: 1.5vw;
+    padding: 1vw;
+    float: left;
+    width: 29.8vw;
+    height: auto;
+    border-radius: 0.5vw;
 }
 
-#ver a{
-    color: #FF8C1A;
-    width: 13vw;
+.btn-cadastro{
+    margin-left: 2vw;
+    margin-top: 2vw;
 }
-
-#voltar{
-    color:orange;
-}
-#voltar a{
-    color:orange;
-}
-#excluir{
-    color:red;
-}
-#excluir a{
-    color:red;
-}
-#editar{
-    color:blue;
-}
-#editar a{
-    color:blue;
-}
-
-
-

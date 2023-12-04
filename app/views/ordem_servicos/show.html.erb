@@ -5,12 +5,12 @@
 
 <div>
   <button type="submit">
-    <%= link_to "Edit this ordem servico", edit_ordem_servico_path(@ordem_servico) %>
+    <%= link_to "Editar", edit_ordem_servico_path(@ordem_servico) %>
   </button>
   <button type="submit">
-    <%= link_to "Back to ordem servicos", ordem_servicos_path %>
+    <%= link_to "Voltar", ordem_servicos_path %>
   </button>
 
-  <%= button_to "Destroy this ordem servico", @ordem_servico, method: :delete %>
+  <%= button_to "Excluir", @ordem_servico, method: :delete %>
 </div>
 </div>
