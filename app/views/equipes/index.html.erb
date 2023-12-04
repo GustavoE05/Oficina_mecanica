@@ -6,12 +6,8 @@
 <div id="equipes">
   <% @equipes.each do |equipe| %>
     <%= render equipe %>
-    <button type="submit">
-      <%= link_to "Ver Equipe", equipe %>
-    </button>
   <% end %>
 </div>
-<button type="submit">
-<%= link_to "Cadastrar equipe", new_equipe_path %>
-</button>
+<%= link_to "Cadastrar equipe", new_equipe_path, class: "btn btn-success" %>
+
 </div>

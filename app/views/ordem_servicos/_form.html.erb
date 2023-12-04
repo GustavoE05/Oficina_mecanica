@@ -26,17 +26,15 @@
     <%= form.collection_select(:equipe_id, Equipe.all, :id, :nome, { prompt: 'Selecione a equipe' }) %>
   </div>
 
-  <!--
   <div>
-    <%= form.label :servico_id, style: "display: block" %>
-    <%= form.collection_select(:servico_id, Servico.all, :id, :nome, { prompt: 'Selecione o serviço'}) %>
+    <%= form.label :part_id, style: "display: block" %>
+    <%= form.collection_select(:part_id, Part.all, :id, :nome, { prompt: 'Selecione a Peça' }) %>
   </div>
 
   <div>
-    <%= form.label :part_id, style: "display: block" %>
-    <%= form.collection_select(:part_id, Part.all, :id, :nome, { prompt: 'Selecione a peça'}) %>
+    <%= form.label :servico_id, style: "display: block" %>
+    <%= form.collection_select(:servico_id, Servico.all, :id, :nome, { prompt: 'Selecione o funcionario' }) %>
   </div>
-  -->
 
   <div>
     <%= form.label :conclusao, style: "display: block" %>

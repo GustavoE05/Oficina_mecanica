@@ -10,17 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_12_03_043827) do
-  create_table "admins", force: :cascade do |t|
-    t.string "nome"
-    t.integer "idade"
-    t.string "cargo"
-    t.string "formaçao"
-    t.text "descriçao"
-    t.string "senha"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema[7.1].define(version: 2023_12_04_170244) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "clientes", force: :cascade do |t|
     t.string "nome"
@@ -44,39 +36,19 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_03_043827) do
     t.string "funcao"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "equipe_id", null: false
+    t.bigint "equipe_id", null: false
     t.index ["equipe_id"], name: "index_funcionarios_on_equipe_id"
-  end
-
-  create_table "ordem_de_servico_pecas", force: :cascade do |t|
-    t.integer "ordem_servicos_id", null: false
-    t.integer "parts_id", null: false
-    t.integer "quantidade"
-    t.decimal "valor"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["ordem_servicos_id"], name: "index_ordem_de_servico_pecas_on_ordem_servicos_id"
-    t.index ["parts_id"], name: "index_ordem_de_servico_pecas_on_parts_id"
-  end
-
-  create_table "ordem_de_servico_servicos", force: :cascade do |t|
-    t.integer "ordem_servicos_id", null: false
-    t.integer "servicos_id", null: false
-    t.integer "quantidade"
-    t.decimal "valor"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["ordem_servicos_id"], name: "index_ordem_de_servico_servicos_on_ordem_servicos_id"
-    t.index ["servicos_id"], name: "index_ordem_de_servico_servicos_on_servicos_id"
   end
 
   create_table "ordem_servicos", force: :cascade do |t|
     t.date "conclusao"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "equipe_id"
-    t.integer "cliente_id"
-    t.integer "veiculo_id"
+    t.bigint "equipe_id"
+    t.bigint "cliente_id"
+    t.bigint "veiculo_id"
+    t.bigint "parts_id"
+    t.bigint "servicos_id"
     t.index ["cliente_id"], name: "index_ordem_servicos_on_cliente_id"
     t.index ["equipe_id"], name: "index_ordem_servicos_on_equipe_id"
     t.index ["veiculo_id"], name: "index_ordem_servicos_on_veiculo_id"
@@ -86,14 +58,6 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_03_043827) do
     t.string "nome"
     t.integer "quantidade"
     t.decimal "preco"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "pecas", force: :cascade do |t|
-    t.string "nome", default: "", null: false
-    t.decimal "preco", null: false
-    t.decimal "quantidadeEstoque", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -124,17 +88,15 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_03_043827) do
     t.string "dono"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "cliente_id", null: false
+    t.bigint "cliente_id", null: false
     t.index ["cliente_id"], name: "index_veiculos_on_cliente_id"
   end
 
   add_foreign_key "funcionarios", "equipes"
-  add_foreign_key "ordem_de_servico_pecas", "ordem_servicos", column: "ordem_servicos_id"
-  add_foreign_key "ordem_de_servico_pecas", "parts", column: "parts_id"
-  add_foreign_key "ordem_de_servico_servicos", "ordem_servicos", column: "ordem_servicos_id"
-  add_foreign_key "ordem_de_servico_servicos", "servicos", column: "servicos_id"
   add_foreign_key "ordem_servicos", "clientes"
   add_foreign_key "ordem_servicos", "equipes"
+  add_foreign_key "ordem_servicos", "parts", column: "parts_id"
+  add_foreign_key "ordem_servicos", "servicos", column: "servicos_id"
   add_foreign_key "ordem_servicos", "veiculos"
   add_foreign_key "veiculos", "clientes"
 end

@@ -2,16 +2,13 @@
 
 <h1>CLIENTE</h1>
 
-<div id="design">
+<div id="clientes">
   <% @clientes.each do |cliente| %>
     <%= render cliente %>
-    <button type="submit">
-      <%= link_to "ver clientes", cliente %>
-    </button>
-  <% end %>
 
+  <% end %>
+</div>
 
 <button type="submit">
 <%= link_to "Cadastrar cliente", new_cliente_path %>
 </button>
-</div>

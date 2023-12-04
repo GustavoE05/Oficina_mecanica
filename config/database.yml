@@ -1,17 +1,21 @@
 
 default: &default
-  adapter: sqlite3
+  adapter: postgresql
+  encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  timeout: 5000
+  database: Oficina
+  username: postgres
+  password: root 
+  host: localhost
 
 development:
   <<: *default
-  database: storage/development.sqlite3
+  database: Oficina/development
 
 test:
   <<: *default
-  database: storage/test.sqlite3
+  database: Oficina/test
 
 production:
   <<: *default
-  database: storage/production.sqlite3
+  database: Oficina/production

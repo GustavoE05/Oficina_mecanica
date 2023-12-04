@@ -7,13 +7,10 @@
 <div id="veiculos">
   <% @veiculos.each do |veiculo| %>
     <%= render veiculo %>
-    <button type=submit>
-      <%= link_to "Ver veiculo", veiculo %>
-    </button>
   <% end %>
 </div>
 
 <button type=submit>
 <%= link_to "Cadastrar veiculo", new_veiculo_path %>
-<button>
+</button>
 </div>

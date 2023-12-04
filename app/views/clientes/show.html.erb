@@ -3,18 +3,6 @@
 
 <%= render @cliente %>
 
-<div>
-  <button id="editar" type="submit">
-  <%= link_to "Editar", edit_cliente_path(@cliente) %> 
-  </button>
 
-  <button id="voltar" type="submit">
-  <%= link_to "Voltar", clientes_path %>
-  </button>
-</div>
-
-  <button id="excluir">
-  <%= button_to "Excluir cliente", @cliente, method: :delete %>
-  </button>
 </div>
 

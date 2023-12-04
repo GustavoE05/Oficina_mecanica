@@ -32,6 +32,8 @@ class OrdemServicosController < ApplicationController
     @ordem_servico.cliente = Cliente.find(params[:ordem_servico][:cliente_id])
     @ordem_servico.veiculo = Veiculo.find(params[:ordem_servico][:veiculo_id])
     @ordem_servico.equipe = Equipe.find(params[:ordem_servico][:equipe_id])
+    @ordem_servico.parts = Part.find(params[:ordem_servico][:part_ids])
+    @ordem_servico.servicos = Servico.find(params[:ordem_servico][:servico_ids])
     #@ordem_servico.created_at = time.now
 
     respond_to do |format|
@@ -77,7 +79,7 @@ class OrdemServicosController < ApplicationController
     # Only allow a list of trusted parameters through.
   
     def ordem_servico_params
-      params.require(:ordem_servico).permit(:cliente_id, :veiculo_id, :equipe_id, :conclusao, servico_ids: [], part_ids: [])
+      params.require(:ordem_servico).permit(:cliente_id, :veiculo_id, :equipe_id, :conclusao, :servico, :part)
     end
 
 end
