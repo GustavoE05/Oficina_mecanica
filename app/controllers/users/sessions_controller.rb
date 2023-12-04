@@ -1,6 +1,11 @@
 # frozen_string_literal: true
 
 class Users::SessionsController < Devise::SessionsController
+
+  layout 'application.html.erb', except: [:new, :create]
+  layout 'login.html.erb', only: [:new, :create]
+  #layout 'application.html.erb', only: [:destroy]
+
   # before_action :configure_sign_in_params, only: [:create]
 
   # GET /resource/sign_in

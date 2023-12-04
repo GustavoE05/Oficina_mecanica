@@ -1,14 +1,17 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Clientes</h1>
+<h1>CLIENTE</h1>
 
-<div id="clientes">
+<div id="design">
   <% @clientes.each do |cliente| %>
     <%= render cliente %>
-    <p>
-      <%= link_to "Show this cliente", cliente %>
-    </p>
+    <button type="submit">
+      <%= link_to "ver clientes", cliente %>
+    </button>
   <% end %>
-</div>
 
-<%= link_to "New cliente", new_cliente_path %>
+
+<button type="submit">
+<%= link_to "Cadastrar cliente", new_cliente_path %>
+</button>
+</div>

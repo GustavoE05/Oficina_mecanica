@@ -1,9 +1,11 @@
-<h1>New equipe</h1>
+<div class="design">
+<h1>Nova equipe</h1>
 
 <%= render "form", equipe: @equipe %>
 
 <br>
 
-<div>
-  <%= link_to "Back to equipes", equipes_path %>
+<button type="submit">
+  <%= link_to "Voltar", equipes_path %>
+</button>
 </div>

@@ -1,9 +1,11 @@
+<div class="design">
 <h1>New servico</h1>
 
 <%= render "form", servico: @servico %>
 
 <br>
 
-<div>
-  <%= link_to "Back to servicos", servicos_path %>
+<button type="submit">
+  <%= link_to "Voltar", servicos_path %>
+</button>
 </div>

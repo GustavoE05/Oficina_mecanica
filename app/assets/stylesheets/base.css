@@ -1,0 +1,168 @@
+* {
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+.row-header{
+    height: 8.928vw;
+    width: 100%;
+    background-color: #FF8C1A;
+    margin: 0;
+    margin-bottom: 0px;
+    padding: 0;
+}
+h2{
+    margin-bottom: 0px;
+    
+}
+
+.foto-perfil{
+    height: 6.250vw;
+    width: 6.250vw;
+    background-color: white;
+    border-radius: 6.944vw;
+}
+
+.validacao{
+    margin-right: 1vw;
+}
+
+.container-fluid{
+    padding-right: 0px;
+    padding-left: 0px;
+    margin: 0;
+}
+.navbar{
+    background-color: black;
+    
+}
+
+.col-md-4{
+    width: 29.861vw;
+    height: 10.667vw;
+    border: solid 3px #FF8C1A;
+    margin-left: 2.5vw;
+    margin-top: 2.3vw;
+    border-radius: 1.736vw;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.55);
+}
+
+.col-md-4 h3{
+    color: #FF8C1A;
+}
+.col-md-4 h1{
+    color: #FF8C1A;
+    font-size: 5vw;
+}
+
+.row-footer{
+    height: 5vw;
+    width: 100%;
+    background-color: black;
+    margin: 0;
+    margin-bottom: 0px;
+    padding: 0;
+    color:#FF8C1A;
+}
+
+/*Clientes*/
+
+.design{
+    margin-left: 1vw;
+}
+
+#design{
+    margin-left: 1vw;
+    width: 29.8vw;
+    height: auto;
+    border: solid 3px #FF8C1A;
+    padding: 1vw;
+    border-radius: 0.5vw;
+}
+
+ input[type="text"]{
+    animation: none;
+    width: 28vw;
+    height: 2.4vw;
+    border-radius: 0.494vw;
+    border: solid 2px #FF8C1A;
+    margin-bottom: 1vw;
+    padding-left: 1vw;
+    font-size: 1.5vw;
+}
+
+input[type="password"]{
+    animation: none;
+    width: 28vw;
+    height: 2.4vw;
+    border-radius: 0.494vw;
+    border: solid 2px #FF8C1A;
+    margin-bottom: 1vw;
+    padding-left: 1vw;
+    font-size: 1.5vw;
+}
+
+input[type="submit"]{
+    animation: none;
+    color: #FF8C1A;
+    width: 13vw;
+    height: 3.4vw;
+    border-radius: 0.294vw;
+    border: solid 2px #FF8C1A;
+    margin-top: 1vw;
+    background-color: white;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+button[type="submit"]{
+    animation: none;
+    color: #FF8C1A;
+    width: 13vw;
+    height: 3.4vw;
+    border-radius: 0.294vw;
+    border: solid 2px #FF8C1A;
+    margin-top: 1vw;
+    background-color: white;
+}
+
+.clientes h1{
+    margin-top: 2vw;
+    font-size: 2vw;
+    margin-bottom: 1.5vw;
+}
+
+#ver {
+    border: solid 2px #FF8C1A;
+}
+
+#ver a{
+    color: #FF8C1A;
+    width: 13vw;
+}
+
+#voltar{
+    color:orange;
+}
+#voltar a{
+    color:orange;
+}
+#excluir{
+    color:red;
+}
+#excluir a{
+    color:red;
+}
+#editar{
+    color:blue;
+}
+#editar a{
+    color:blue;
+}
+
+
+

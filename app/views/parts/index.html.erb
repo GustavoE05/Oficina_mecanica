@@ -1,3 +1,4 @@
+<div class="design">
 <p style="color: green"><%= notice %></p>
 
 <h1>Parts</h1>
@@ -5,10 +6,14 @@
 <div id="parts">
   <% @parts.each do |part| %>
     <%= render part %>
-    <p>
+    <button type="submit">
       <%= link_to "Show this part", part %>
-    </p>
+    </button>
   <% end %>
 </div>
 
+<button type="submit">
 <%= link_to "New part", new_part_path %>
+</button>
+
+</div>

@@ -1,3 +1,5 @@
+<div class="design">
+
 <h1>New veiculo</h1>
 
 <%= render "form", veiculo: @veiculo %>
@@ -5,5 +7,7 @@
 <br>
 
 <div>
-  <%= link_to "Back to veiculos", veiculos_path %>
+  <button type="submit">
+    <%= link_to "Voltar", veiculos_path %>
+</button>
 </div>

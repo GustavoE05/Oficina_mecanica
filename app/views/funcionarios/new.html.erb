@@ -1,9 +1,11 @@
-<h1>New funcionario</h1>
+<div class="design">
+<h1>Novo funcionario</h1>
 
 <%= render "form", funcionario: @funcionario %>
 
 <br>
 
-<div>
-  <%= link_to "Back to funcionarios", funcionarios_path %>
+<button type="submit">
+  <%= link_to "Voltar", funcionarios_path %>
+</button>
 </div>

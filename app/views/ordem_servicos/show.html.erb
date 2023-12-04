@@ -1,10 +1,16 @@
+<div class="design">
 <p style="color: green"><%= notice %></p>
 
 <%= render @ordem_servico %>
 
 <div>
-  <%= link_to "Edit this ordem servico", edit_ordem_servico_path(@ordem_servico) %> |
-  <%= link_to "Back to ordem servicos", ordem_servicos_path %>
+  <button type="submit">
+    <%= link_to "Edit this ordem servico", edit_ordem_servico_path(@ordem_servico) %>
+  </button>
+  <button type="submit">
+    <%= link_to "Back to ordem servicos", ordem_servicos_path %>
+  </button>
 
   <%= button_to "Destroy this ordem servico", @ordem_servico, method: :delete %>
+</div>
 </div>

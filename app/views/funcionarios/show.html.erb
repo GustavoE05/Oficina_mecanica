@@ -1,10 +1,17 @@
+<div class="design">
 <p style="color: green"><%= notice %></p>
 
 <%= render @funcionario %>
 
 <div>
-  <%= link_to "Edit this funcionario", edit_funcionario_path(@funcionario) %> |
-  <%= link_to "Back to funcionarios", funcionarios_path %>
+<button type="submit">
+  <%= link_to "Editar", edit_funcionario_path(@funcionario) %> 
+</button>
+<button type="submit">
+  <%= link_to "Voltar", funcionarios_path %>
+</button>
 
-  <%= button_to "Destroy this funcionario", @funcionario, method: :delete %>
+  <%= button_to "Excluir", @funcionario, method: :delete %>
+
+</div>
 </div>

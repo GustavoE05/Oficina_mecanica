@@ -1,10 +1,20 @@
+<div id="design">
 <p style="color: green"><%= notice %></p>
 
 <%= render @cliente %>
 
 <div>
-  <%= link_to "Edit this cliente", edit_cliente_path(@cliente) %> |
-  <%= link_to "Back to clientes", clientes_path %>
+  <button id="editar" type="submit">
+  <%= link_to "Editar", edit_cliente_path(@cliente) %> 
+  </button>
 
-  <%= button_to "Destroy this cliente", @cliente, method: :delete %>
+  <button id="voltar" type="submit">
+  <%= link_to "Voltar", clientes_path %>
+  </button>
 </div>
+
+  <button id="excluir">
+  <%= button_to "Excluir cliente", @cliente, method: :delete %>
+  </button>
+</div>
+

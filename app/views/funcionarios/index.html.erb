@@ -1,3 +1,4 @@
+<div class="design">
 <p style="color: green"><%= notice %></p>
 
 <h1>Funcionarios</h1>
@@ -5,10 +6,13 @@
 <div id="funcionarios">
   <% @funcionarios.each do |funcionario| %>
     <%= render funcionario %>
-    <p>
+    <button type="submit">
       <%= link_to "Show this funcionario", funcionario %>
-    </p>
+    </button>
   <% end %>
 </div>
 
+<button type="submit">
 <%= link_to "New funcionario", new_funcionario_path %>
+</button>
+</div>

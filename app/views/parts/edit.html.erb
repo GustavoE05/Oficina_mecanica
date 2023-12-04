@@ -1,3 +1,4 @@
+<div class="design">
 <h1>Editing part</h1>
 
 <%= render "form", part: @part %>
@@ -5,6 +6,11 @@
 <br>
 
 <div>
-  <%= link_to "Show this part", @part %> |
-  <%= link_to "Back to parts", parts_path %>
+  <button type="submit">
+    <%= link_to "Show this part", @part %>
+  </button>
+  <button type="submit">
+    <%= link_to "Back to parts", parts_path %>
+  </button>
+</div>
 </div>

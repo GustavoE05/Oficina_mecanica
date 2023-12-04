@@ -1,3 +1,4 @@
+<div class="design">
 <p style="color: green"><%= notice %></p>
 
 <h1>Servicos</h1>
@@ -5,10 +6,13 @@
 <div id="servicos">
   <% @servicos.each do |servico| %>
     <%= render servico %>
-    <p>
-      <%= link_to "Show this servico", servico %>
-    </p>
+    <button type="submit">
+      <%= link_to "ver servicos", servico %>
+    </button>
   <% end %>
 </div>
 
-<%= link_to "New servico", new_servico_path %>
+<button type="submit">
+<%= link_to "Novo servico", new_servico_path %>
+</button>
+</div>
