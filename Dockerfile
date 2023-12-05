@@ -39,9 +39,9 @@ RUN chmod +x bin/* && \
     sed -i 's/ruby\.exe$/ruby/' bin/*
 
 # Precompiling assets for production with the correct secret key base
-##RUN RAILS_ENV=production \
-##    SECRET_KEY_BASE=$(cat /rails/config/master.key) \
-##   bundle exec rake assets:precompile
+RUN RAILS_ENV=production \
+    SECRET_KEY_BASE=$(cat /rails/config/master.key) \
+   bundle exec rake assets:precompile
 
 
 # Final stage for app image
