@@ -2,20 +2,13 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  database: Oficina
-  username: postgres
-  password: root 
-  host: localhost
+  pool: <%= ENV.fetch("DB_POOL") { 5 } %>
 
 development:
   <<: *default
-  database: Oficina/development
-
-test:
-  <<: *default
-  database: Oficina/test
-
-production:
-  <<: *default
-  database: Oficina/production
+  username: doadmin
+  password: AVNS_27eJ-pxOs62WfQ9kk3r
+  host: db-postgresql-nyc3-89877-do-user-15310791-0.c.db.ondigitalocean.com
+  port: 25060
+  database: defaultdb
+  sslmode: require
