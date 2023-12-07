@@ -4,6 +4,7 @@ class PartsController < ApplicationController
   # GET /parts or /parts.json
   def index
     @parts = Part.all
+    @valor_total_em_estoque = Part.valor_total_em_estoque
   end
 
   # GET /parts/1 or /parts/1.json

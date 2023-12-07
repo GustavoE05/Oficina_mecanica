@@ -6,14 +6,9 @@
 <div id="ordem_servicos">
   <% @ordem_servicos.each do |ordem_servico| %>
     <%= render ordem_servico %>
-    <button type="submit">
-      <%= link_to "Show this ordem servico", ordem_servico %>
-    </button>
   <% end %>
 </div>
 
-<button type="submit">
-<%= link_to "Cadastrar ordem servico", new_ordem_servico_path %>
-</button>
+<%= link_to "Cadastrar ordem servico", new_ordem_servico_path, class: "btn btn-success btn-cadastro" %>
 
 </div>

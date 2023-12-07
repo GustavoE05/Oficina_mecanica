@@ -3,14 +3,9 @@
 
 <%= render "form", part: @part %>
 
-<br>
-
 <div>
-  <button type="submit">
-    <%= link_to " Ver peça", @part %>
-  </button>
-  <button type="submit">
-    <%= link_to "Voltar", parts_path %>
-  </button>
+
+    <%= link_to "Voltar", parts_path, class: "btn btn-warning"%>
+
 </div>
 </div>

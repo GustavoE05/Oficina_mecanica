@@ -6,14 +6,9 @@
 <div id="parts">
   <% @parts.each do |part| %>
     <%= render part %>
-    <button type="submit">
-      <%= link_to "Ver peça", part %>
-    </button>
   <% end %>
 </div>
 
-<button type="submit">
-<%= link_to "Cadastrar peça", new_part_path %>
-</button>
+<%= link_to "Cadastrar peça", new_part_path, class: "btn btn-success btn-cadastro" %>
 
 </div>

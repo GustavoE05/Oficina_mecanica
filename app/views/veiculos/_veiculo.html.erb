@@ -1,4 +1,4 @@
-<div id="<%= dom_id veiculo %>">
+<div id="<%= dom_id veiculo %>" class="design-info">
   <p>
     <strong>Modelo:</strong>
     <%= veiculo.modelo %>
@@ -19,8 +19,7 @@
     <%= veiculo.cliente.nome if veiculo.cliente %>
   </p>
 
-  <button type=submit>
-      <%= link_to "Ver veiculo", veiculo %>
-    </button>
+  <%= link_to "Editar", edit_veiculo_path(veiculo), class: "btn btn-primary" %>
+  <%= button_to "Deletar", veiculo, method: :delete, class: "btn btn-danger mt-1 " %>
 
 </div>

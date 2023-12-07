@@ -1,13 +1,11 @@
-<div class="design">
+<div>
 <p style="color: green"><%= notice %></p>
 
 <%= render @funcionario %>
 
 <div>
 
-<button type="submit" style="margin-left:1vw; margin-top:10.5vw" >
-  <%= link_to "Voltar", funcionarios_path %>
-</button>
+  <%= link_to "Voltar", funcionarios_path, class: "btn btn-warning" %>
 
 </div>
 </div>

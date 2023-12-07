@@ -18,5 +18,8 @@
     <strong>DESCRIÇÃO</strong>
     <%= equipe.descricao %>
   </p>
-      <%= link_to "Ver equipe", equipe, class:"btn btn-success" %>
+
+  <%= link_to "Editar", edit_equipe_path(equipe), class: "btn btn-primary" %>
+  <%= button_to "Deletar", equipe, method: :delete, class: "btn btn-danger mt-1 " %> 
+      
 </div>

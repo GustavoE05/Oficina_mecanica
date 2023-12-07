@@ -6,13 +6,9 @@
 <div id="servicos">
   <% @servicos.each do |servico| %>
     <%= render servico %>
-    <button type="submit">
-      <%= link_to "Ver servico", servico %>
-    </button>
   <% end %>
 </div>
 
-<button type="submit">
-<%= link_to "Cadastrar servico", new_servico_path %>
-</button>
+<%= link_to "Cadastrar servico", new_servico_path, class: "btn btn-success btn-cadastro"%>
+
 </div>

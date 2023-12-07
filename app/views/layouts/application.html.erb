@@ -14,7 +14,7 @@
     <div class="row-header">
       <div class="col-md-12 d-flex align-items-center justify-content-end p-2">
 
-      <div class="nome-perfil mt-5 ">
+      <div class="nome-perfil mt-4 align-self-center">
         <% if user_signed_in? %>
           <p style="color: white; font-size:1vw; font-family: Arial, Helvetica, sans-serif;margin-right: 10px;">
           Olá, <%= current_user.email %>
@@ -22,11 +22,11 @@
         <% end %>
       </div>
 
-      <div class="mt-4">  
+      <div class="mt-2 align-self-center">  
           <% if user_signed_in? %>
-            <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "btn btn-secondary" %>
+            <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "btn btn-danger" %>
           <% else %>
-            <%= link_to 'Login', new_user_session_path, class: "btn btn-secondary" %>
+            <%= link_to 'Login', new_user_session_path, class: "btn btn-success" %>
           <% end %>
       </div>
 
@@ -36,57 +36,56 @@
   </header>
 
   <nav class="navbar navbar-expand-lg navbar-light bg-black col-md-12 text-white">
-  <div class="navbar-nav p-2">
-    <div class="navbar-t px-5 mt-3">
+    <div class="navbar-nav p-2 d-flex justify-content-between" style="margin-left: 5vw;">
+      <div class="navbar-t px-5 mt-3 flex-grow-1">
         <%= link_to root_path, class: "nav-item nav-link" do %>
-            <p style="color: white; font-size:1.1vw; font-family: Arial, Helvetica, sans-serif;">DASHBOARD</p>
+          <p style="color: white; font-size:1.1vw; font-family: Arial, Helvetica, sans-serif;">DASHBOARD</p>
         <% end %>
-    </div>
+      </div>
 
-    <div class="px-4 mt-3">
-    <%= link_to clientes_path, class: "nav-item nav-link" do %>
-        <p  style="color: white; font-size:1.1vw; font-family: Arial, Helvetica, sans-serif;">CLIENTES</p>
+      <div class="px-4 mt-3 flex-grow-1">
+        <%= link_to clientes_path, class: "nav-item nav-link" do %>
+          <p  style="color: white; font-size:1.1vw; font-family: Arial, Helvetica, sans-serif;">CLIENTES</p>
         <% end %>
-    </div>
+      </div>
 
-    <div class="px-4 mt-3">
+      <div class="px-4 mt-3 flex-grow-1">
         <%= link_to veiculos_path, class: "nav-item nav-link" do %>
-        <p style="color: white; font-size:1.1vw; font-family: Arial, Helvetica, sans-serif;">VEICULOS</p>    
+          <p style="color: white; font-size:1.1vw; font-family: Arial, Helvetica, sans-serif;">VEICULOS</p>    
         <% end %>
-    </div>
+      </div>
 
-    <div class="px-5 mt-3">
+      <div class="px-4 mt-3 flex-grow-1">
         <%= link_to servicos_path, class: "nav-item nav-link" do %>
-        <p style="color: white; font-size:1.1vw; font-family: Arial, Helvetica, sans-serif;">SERVIÇOS</p>    
+          <p style="color: white; font-size:1.1vw; font-family: Arial, Helvetica, sans-serif;">SERVIÇOS</p>    
         <% end %>
-    </div>
-    
-    <div class="px-4 mt-3">
+      </div>
+      
+      <div class="px-4 mt-3 flex-grow-1">
         <%= link_to parts_path, class: "nav-item nav-link" do %>
-        <p style="color: white; font-size:1.1vw; font-family: Arial, Helvetica, sans-serif;">PEÇAS</p>    
+          <p style="color: white; font-size:1.1vw; font-family: Arial, Helvetica, sans-serif;">PEÇAS</p>    
         <% end %>
-    </div>
+      </div>
 
-    <div class="px-4 mt-3">
+      <div class="px-4 mt-3 flex-grow-1">
         <%= link_to ordem_servicos_path, class: "nav-item nav-link" do %>
-        <p style="color: white; font-size:1.1vw; font-family: Arial, Helvetica, sans-serif;">ORDENS</p>    
+          <p style="color: white; font-size:1.1vw; font-family: Arial, Helvetica, sans-serif;">ORDENS</p>    
         <% end %>
-    </div>
+      </div>
 
-    <div class="px-4 mt-3">
+      <div class="px-4 mt-3 flex-grow-2">
         <%= link_to funcionarios_path, class: "nav-item nav-link" do %>
-        <p style="color: white; font-size:1.1vw; font-family: Arial, Helvetica, sans-serif;">FUNCIONÁRIOS</p>    
+          <p style="color: white; font-size:1.1vw; font-family: Arial, Helvetica, sans-serif;">FUNCIONÁRIOS</p>    
         <% end %>
-    </div>
+      </div>
 
-    <div class="px-5 mt-3">
+      <div class="px-4 mt-3 flex-grow-2">
         <%= link_to equipes_path, class: "nav-item nav-link" do %>
-        <p style="color: white; font-size:1.1vw; font-family: Arial, Helvetica, sans-serif;">EQUIPES</p>    
+          <p style="color: white; font-size:1.1vw; font-family: Arial, Helvetica, sans-serif;">EQUIPES</p>    
         <% end %>
+      </div>
     </div>
-
-  </div>
-</nav>
+  </nav>
     <%= yield %>
   </body>
 </html>

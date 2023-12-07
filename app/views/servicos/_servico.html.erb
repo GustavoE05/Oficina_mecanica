@@ -1,4 +1,4 @@
-<div id="<%= dom_id servico %>">
+<div id="<%= dom_id servico %>" class="design-info">
   <p>
     <strong>Nome:</strong>
     <%= servico.nome %>
@@ -8,5 +8,8 @@
     <strong>Valor:</strong>
     <%= servico.valor %>
   </p>
+
+  <%= link_to "Editar", edit_servico_path(servico), class: "btn btn-primary" %>
+  <%= button_to "Deletar", servico, method: :delete, class: "btn btn-danger mt-1 " %>
 
 </div>

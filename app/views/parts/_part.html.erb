@@ -1,4 +1,4 @@
-<div id="<%= dom_id part %>">
+<div id="<%= dom_id part %>" class="design-info">
   <p>
     <strong>Nome:</strong>
     <%= part.nome %>
@@ -13,5 +13,8 @@
     <strong>Preco:</strong>
     <%= part.preco %>
   </p>
+
+  <%= link_to "Editar", edit_part_path(part), class: "btn btn-primary" %>
+  <%= button_to "Deletar", part, method: :delete, class: "btn btn-danger mt-1 " %>
 
 </div>

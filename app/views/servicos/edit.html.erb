@@ -3,14 +3,10 @@
 
 <%= render "form", servico: @servico %>
 
-<br>
-
 <div>
-  <button type="submit">
-    <%= link_to "Ver servico", @servico %> 
-  </button>
-  <button type="submit">
-    <%= link_to "Voltar", servicos_path %>
-  </button>
+
+
+    <%= link_to "Voltar", servicos_path, class: "btn btn-warning"%>
+
 </div>
 </div>

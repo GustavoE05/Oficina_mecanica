@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   resources :ordem_servicos
   resources :equipes
   resources :veiculos
-
   resources :funcionarios
   resources :parts
   resources :servicos

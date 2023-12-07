@@ -4,13 +4,7 @@
 <%= render @servico %>
 
 <div>
-  <button type="submit">
-    <%= link_to "EEditar", edit_servico_path(@servico) %>
-  </button>
-  <button type="submit">
-    <%= link_to "Voltar", servicos_path %>
-  </button>
 
-  <%= button_to "Excluir", @servico, method: :delete %>
-</div>
+    <%= link_to "Voltar", servicos_path, class: "btn btn-warning" %>
+
 </div>

@@ -1,16 +1,10 @@
-<div class="design">
+<div>
 <p style="color: green"><%= notice %></p>
 
 <%= render @ordem_servico %>
 
 <div>
-  <button type="submit">
-    <%= link_to "Editar", edit_ordem_servico_path(@ordem_servico) %>
-  </button>
-  <button type="submit">
-    <%= link_to "Voltar", ordem_servicos_path %>
-  </button>
 
-  <%= button_to "Excluir", @ordem_servico, method: :delete %>
-</div>
+    <%= link_to "Voltar", ordem_servicos_path, class: "btn btn-warning" %>
+
 </div>

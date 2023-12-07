@@ -3,11 +3,9 @@
 
 <%= render "form", funcionario: @funcionario %>
 
-<br>
-
 <div>
-<button type="submit">
-  <%= link_to "Voltar", funcionarios_path %>
-</button>
+
+  <%= link_to "Voltar", funcionarios_path, class: "btn btn-warning voltar" %>
+
 </div>
 </div>

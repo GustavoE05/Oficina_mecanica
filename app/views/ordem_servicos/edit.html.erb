@@ -3,14 +3,9 @@
 
 <%= render "form", ordem_servico: @ordem_servico %>
 
-<br>
-
 <div>
-  <button type="submit">
-  <%= link_to "Ver ordem servico", @ordem_servico %> 
-  </button>
-  <button type="submit">
-  <%= link_to "Voltar", ordem_servicos_path %>
-  </button>
+  
+  <%= link_to "Voltar", ordem_servicos_path, class: "btn btn-warning voltar" %>
+  
 </div>
 </div>

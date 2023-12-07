@@ -3,9 +3,16 @@
     padding: 0;
     margin: 0;
 }
+.nav-item p {
+    transition: transform 0.3s ease;
+  }
+
+  .nav-item:hover p {
+    transform: scale(1.1);
+  }
 
 .row-header{
-    height: 8.928vw;
+    height: 8.5vw;
     width: 100%;
     background-color: #FF8C1A;
     margin: 0;
@@ -66,7 +73,6 @@ h2{
     color:#FF8C1A;
 }
 
-/*Clientes*/
 
 .design{
     margin-left: 1vw;
@@ -81,37 +87,39 @@ h2{
     border-radius: 0.5vw;
 }
 
- input[type="text"]{
+ input{
     animation: none;
-    width: 28vw;
-    height: 2.4vw;
+    width: 23vw;
+    height: 2vw;
     border-radius: 0.494vw;
     border: solid 2px #FF8C1A;
     margin-bottom: 1vw;
-    padding-left: 1vw;
-    font-size: 1.5vw;
-}
-
-input[type="password"]{
-    animation: none;
-    width: 28vw;
-    height: 2.4vw;
-    border-radius: 0.494vw;
-    border: solid 2px #FF8C1A;
-    margin-bottom: 1vw;
-    padding-left: 1vw;
-    font-size: 1.5vw;
+    padding-left: 0.3vw;
+    font-size: 1vw;
 }
 
 input[type="submit"]{
     animation: none;
-    color: #FF8C1A;
-    width: 13vw;
-    height: 3.4vw;
+    padding: 0.5vw;
+    color: white;
+    width: auto;
+    height: 2.79vw;
     border-radius: 0.294vw;
-    border: solid 2px #FF8C1A;
+    border: none;
     margin-top: 1vw;
-    background-color: white;
+    background-color: cornflowerblue;
+    float: left;
+}
+
+select{
+    animation: none;
+    width: 23vw;
+    height: 2.2vw;
+    border-radius: 0.494vw;
+    border: solid 2px #FF8C1A;
+    margin-bottom: 1vw;
+    padding-left: 0.3vw;
+    font-size: 1.111vw;
 }
 
 a{
@@ -125,10 +133,15 @@ a{
     margin-bottom: 1.5vw;
 }
 
+h1{
+    margin-left: 2vw;
+}
+
 .design-info{
     border: solid 3px #FF8C1A;
     margin-left: 2vw;
     margin-top: 1.5vw;
+    margin-bottom: 1vw;
     padding: 1vw;
     float: left;
     width: 29.8vw;
@@ -155,4 +168,26 @@ a{
 .btn-cadastro{
     margin-left: 2vw;
     margin-top: 2vw;
+}
+
+.btn-warning{
+    margin-left: 0.5vw;
+    margin-top: 1vw;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    background-color: #F0F0F0;
+}
+
+body::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color:silver;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: silver;
 }

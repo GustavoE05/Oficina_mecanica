@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_12_04_170244) do
+ActiveRecord::Schema[7.1].define(version: 2023_12_05_235416) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -47,10 +47,12 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_04_170244) do
     t.bigint "equipe_id"
     t.bigint "cliente_id"
     t.bigint "veiculo_id"
-    t.bigint "parts_id"
-    t.bigint "servicos_id"
+    t.bigint "part_id"
+    t.bigint "servico_id"
     t.index ["cliente_id"], name: "index_ordem_servicos_on_cliente_id"
     t.index ["equipe_id"], name: "index_ordem_servicos_on_equipe_id"
+    t.index ["part_id"], name: "index_ordem_servicos_on_part_id"
+    t.index ["servico_id"], name: "index_ordem_servicos_on_servico_id"
     t.index ["veiculo_id"], name: "index_ordem_servicos_on_veiculo_id"
   end
 
@@ -95,8 +97,10 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_04_170244) do
   add_foreign_key "funcionarios", "equipes"
   add_foreign_key "ordem_servicos", "clientes"
   add_foreign_key "ordem_servicos", "equipes"
-  add_foreign_key "ordem_servicos", "parts", column: "parts_id"
-  add_foreign_key "ordem_servicos", "servicos", column: "servicos_id"
+  add_foreign_key "ordem_servicos", "parts"
+  add_foreign_key "ordem_servicos", "parts"
+  add_foreign_key "ordem_servicos", "servicos"
+  add_foreign_key "ordem_servicos", "servicos"
   add_foreign_key "ordem_servicos", "veiculos"
   add_foreign_key "veiculos", "clientes"
 end

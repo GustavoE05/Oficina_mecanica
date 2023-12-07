@@ -1,4 +1,4 @@
-<div id="<%= dom_id ordem_servico %>">
+<div id="<%= dom_id ordem_servico %>"  class="design-info">
 
   <p>
     <strong>Cliente:</strong>
@@ -24,4 +24,18 @@
     <strong>Conclusao:</strong>
     <%= ordem_servico.conclusao %>
   </p>
+
+  <p>
+    <strong>Peça:</strong>
+    <%= ordem_servico.part.nome %>
+  </p>
+
+  <p>
+    <strong>Servico:</strong>
+    <%= ordem_servico.servico.nome %>
+  </p>
+
+  <%= link_to "Editar", edit_ordem_servico_path(ordem_servico), class: "btn btn-primary" %>
+  <%= button_to "Deletar", ordem_servico, method: :delete, class: "btn btn-danger mt-1 " %>
+
 </div>

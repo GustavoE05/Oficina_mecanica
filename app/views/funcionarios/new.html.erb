@@ -1,11 +1,8 @@
 <div class="design">
-<h1>CADASTRAR SERVIÇO</h1>
+<h1>CADASTRAR FUNCIONÁRIO</h1>
 
 <%= render "form", funcionario: @funcionario %>
 
-<br>
+  <%= link_to "Voltar", funcionarios_path, class: "btn btn-warning" %>
 
-<button type="submit">
-  <%= link_to "Voltar", funcionarios_path %>
-</button>
 </div>

@@ -1,11 +1,11 @@
+<div class="design">
 <h1>EDITAR CLIENTE</h1>
 
 <%= render "form", cliente: @cliente %>
 
-<br>
-
 <div>
-<button id="voltar" type="submit">
-  <%= link_to "Voltar", clientes_path %>
-</button>
+
+  <%= link_to "Voltar", clientes_path, class:"btn btn-warning voltar" %>
+
+</div>
 </div>
