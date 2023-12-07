@@ -38,11 +38,10 @@ RUN chmod +x bin/* && \
     sed -i "s/\r$//g" bin/* && \
     sed -i 's/ruby\.exe$/ruby/' bin/*
 
-# Precompiling assets for production with the correct secret key base
-ARG SECRET_KEY_BASE
-RUN RAILS_ENV=production \
-    SECRET_KEY_BASE=$SECRET_KEY_BASE \
-    bundle exec rake assets:precompile
+# Precompile assets
+#secret key base
+ARG SECRET_KEY_BASE=c973675f25193c0e71233a8b08d95d9413a1d885d9bc3e6809890e71bdae500343d9027688634642bb1f9c7ef15478e33325f3e294c215a7daed7fa758c9c62d
+
 
 # Final stage for app image
 FROM base
