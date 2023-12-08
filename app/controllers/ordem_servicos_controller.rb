@@ -34,8 +34,7 @@ class OrdemServicosController < ApplicationController
     @ordem_servico.equipe = Equipe.find(params[:ordem_servico][:equipe_id])
     @ordem_servico.part = Part.find(params[:ordem_servico][:part_id])
     @ordem_servico.servico = Servico.find(params[:ordem_servico][:servico_id])
-    #@ordem_servico.created_at = time.now
-
+  
     respond_to do |format|
       if @ordem_servico.save
         format.html { redirect_to ordem_servico_url(@ordem_servico), notice: "Ordem servico was successfully created." }
@@ -79,7 +78,7 @@ class OrdemServicosController < ApplicationController
     # Only allow a list of trusted parameters through.
   
     def ordem_servico_params
-      params.require(:ordem_servico).permit(:cliente_id, :veiculo_id, :equipe_id, :conclusao, :servico_id, :part_id)
+      params.require(:ordem_servico).permit(:cliente_id, :veiculo_id, :equipe_id, :conclusao, :servico_id, :part_id, :created_at, :updated_at)
     end
 
 end

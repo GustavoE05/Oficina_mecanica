@@ -1,3 +1,3 @@
 class Servico < ApplicationRecord
-    has_many :ordem_servicos
+    has_many :ordem_servicos, dependent: :destroy
 end

@@ -17,7 +17,7 @@
 
   <p>
   <strong>Data de Criação:</strong>
-  <%= @ordem_servico.created_at %>
+  <%= ordem_servico.created_at %>
   </p>
 
   <p>
@@ -35,6 +35,13 @@
     <%= ordem_servico.servico.nome %>
   </p>
 
+  <p>
+  <strong>Valor Total:</strong>
+    <%= ordem_servico.valor_total %>
+  </p>
+
+
+  
   <%= link_to "Editar", edit_ordem_servico_path(ordem_servico), class: "btn btn-primary" %>
   <%= button_to "Deletar", ordem_servico, method: :delete, class: "btn btn-danger mt-1 " %>
 

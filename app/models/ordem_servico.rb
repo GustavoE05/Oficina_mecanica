@@ -5,4 +5,8 @@ class OrdemServico < ApplicationRecord
     belongs_to :servico
     belongs_to :part
     
+    def valor_total
+        (part&.preco.to_f || 0) + (servico&.valor.to_f || 0)
+    end
+
 end

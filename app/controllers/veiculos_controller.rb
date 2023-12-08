@@ -1,6 +1,11 @@
 class VeiculosController < ApplicationController
   before_action :set_veiculo, only: %i[ show edit update destroy ]
 
+  def filtrar_por_cliente
+    @veiculos = Veiculo.where(cliente_id: params[:cliente_id])
+    render json: @veiculos.pluck(:id, :modelo)
+  end
+
   # GET /veiculos or /veiculos.json
   def index
     @veiculos = Veiculo.includes(:cliente).all

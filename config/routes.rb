@@ -18,7 +18,10 @@ Rails.application.routes.draw do
   get 'home/dashboard'
   root 'home#dashboard'
 
-  #get 'home/pecas'
-  #get 'home/pecas/:id', to: 'home#pecas'
+  resources :veiculos do
+    collection do
+      get 'filtrar_por_cliente'
+    end
+  end
   
 end

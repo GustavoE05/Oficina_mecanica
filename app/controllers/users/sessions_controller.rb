@@ -2,13 +2,7 @@
 
 class Users::SessionsController < Devise::SessionsController
 
-  layout 'devise_layout'
-
-  def index
-
-  end
-  
-  #layout 'application.html.erb', only: [:destroy]
+  layout 'application.html.erb', except: [:destroy]
 
   # before_action :configure_sign_in_params, only: [:create]
 
