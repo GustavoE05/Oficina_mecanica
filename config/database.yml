@@ -12,3 +12,14 @@ development:
   port: 25060
   database: defaultdb
   sslmode: require
+
+production:
+  <<: *default
+  username: doadmin
+  password: AVNS_27eJ-pxOs62WfQ9kk3r
+  host: db-postgresql-nyc3-89877-do-user-15310791-0.c.db.ondigitalocean.com
+  port: 25060
+  database: defaultdb
+  sslmode: require
+
+  

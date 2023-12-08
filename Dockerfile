@@ -42,13 +42,12 @@ RUN chmod +x bin/* && \
 #secret key base
 ARG SECRET_KEY_BASE=c973675f25193c0e71233a8b08d95d9413a1d885d9bc3e6809890e71bdae500343d9027688634642bb1f9c7ef15478e33325f3e294c215a7daed7fa758c9c62d
 
-
 # Final stage for app image
 FROM base
 
 # Install packages needed for deployment
 RUN apt-get update -qq && \
-    apt-get install --no-install-recommends -y curl libsqlite3-0 libvips && \
+    apt-get install --no-install-recommends -y curl libvips libpq-dev && \
     rm -rf /var/lib/apt/lists /var/cache/apt/archives
 
 # Copy built artifacts: gems, application
