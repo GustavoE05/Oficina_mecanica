@@ -1,4 +1,4 @@
 class Veiculo < ApplicationRecord
-    belongs_to :cliente, dependent: :destroy
+    belongs_to :cliente
     has_many :ordem_servicos, dependent: :destroy
 end
