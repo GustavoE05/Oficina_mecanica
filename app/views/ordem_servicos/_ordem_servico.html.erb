@@ -41,7 +41,15 @@
   </p>
 
 
-  
+  <% if ordem_servico.id.present? %>
+    
+    <% if ordem_servico.concluida? %>
+      <span class="btn btn-success disabled">Concluida</span>
+    <% else %>
+      <%= button_to 'Concluir Ordem de Serviço', concluir_ordem_servico_path(ordem_servico), method: :post, class: "btn btn-success mb-1" %>
+    <% end %>
+    
+  <% end %>
   <%= link_to "Editar", edit_ordem_servico_path(ordem_servico), class: "btn btn-primary" %>
   <%= button_to "Deletar", ordem_servico, method: :delete, class: "btn btn-danger mt-1 " %>
 

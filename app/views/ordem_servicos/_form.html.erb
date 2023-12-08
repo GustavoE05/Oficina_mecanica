@@ -31,8 +31,6 @@
     <%= form.collection_select(:part_id, Part.all, :id, :nome, { prompt: 'Selecione a Peça' }) %>
   </div>
 
-
-
   <div>
     <%= form.label :servico_id, style: "display: block" %>
     <%= form.collection_select(:servico_id, Servico.all, :id, :nome, { prompt: 'Selecione o funcionario' }) %>

@@ -18,9 +18,9 @@ Rails.application.routes.draw do
   get 'home/dashboard'
   root 'home#dashboard'
 
-  resources :veiculos do
-    collection do
-      get 'filtrar_por_cliente'
+  resources :ordem_servicos do
+    member do
+      post 'concluir'
     end
   end
   

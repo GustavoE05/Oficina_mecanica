@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_12_05_235416) do
+ActiveRecord::Schema[7.1].define(version: 2023_12_08_055138) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -49,6 +49,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_05_235416) do
     t.bigint "veiculo_id"
     t.bigint "part_id"
     t.bigint "servico_id"
+    t.boolean "concluida"
     t.index ["cliente_id"], name: "index_ordem_servicos_on_cliente_id"
     t.index ["equipe_id"], name: "index_ordem_servicos_on_equipe_id"
     t.index ["part_id"], name: "index_ordem_servicos_on_part_id"

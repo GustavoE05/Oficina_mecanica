@@ -1,6 +1,13 @@
 class OrdemServicosController < ApplicationController
   before_action :set_ordem_servico, only: %i[ show edit update destroy ]
 
+  def concluir
+    @ordem_servico = OrdemServico.find(params[:id])
+    @ordem_servico.update(concluida: true) unless @ordem_servico.concluida?
+
+    redirect_to @ordem_servico, notice: 'Ordem de serviço concluída com sucesso.'
+  end
+
   # GET /ordem_servicos or /ordem_servicos.json
   def index
     @ordem_servicos = OrdemServico.all
@@ -37,6 +44,13 @@ class OrdemServicosController < ApplicationController
   
     respond_to do |format|
       if @ordem_servico.save
+
+        @ordem_servico.part.decrement!(:quantidade)
+
+        if @ordem_servico.part.quantidade.zero?
+          @ordem_servico.update(part: nil)
+        end
+
         format.html { redirect_to ordem_servico_url(@ordem_servico), notice: "Ordem servico was successfully created." }
         format.json { render :show, status: :created, location: @ordem_servico }
       else

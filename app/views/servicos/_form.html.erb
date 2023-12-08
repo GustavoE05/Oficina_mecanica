@@ -18,7 +18,7 @@
 
   <div>
     <%= form.label :valor, style: "display: block" %>
-    <%= form.text_field :valor %>
+    <%= form.text_field :valor, min: 0, step: 1 %>
   </div>
 
   <div>

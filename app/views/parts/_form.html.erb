@@ -18,12 +18,12 @@
 
   <div>
     <%= form.label :quantidade, style: "display: block" %>
-    <%= form.number_field :quantidade %>
+    <%= form.number_field :quantidade, min: 0, step: 1 %>
   </div>
 
   <div>
     <%= form.label :preco, style: "display: block" %>
-    <%= form.text_field :preco %>
+    <%= form.text_field :preco, min: 0, step: 1 %>
   </div>
 
   <div>
