@@ -30,6 +30,9 @@ RUN bundle install && \
 # Copy application code
 COPY . .
 
+# Precompile assets
+RUN bundle exec rake assets:precompile
+
 # Precompile bootsnap code for faster boot times
 RUN bundle exec bootsnap precompile app/ lib/
 
@@ -37,10 +40,6 @@ RUN bundle exec bootsnap precompile app/ lib/
 RUN chmod +x bin/* && \
     sed -i "s/\r$//g" bin/* && \
     sed -i 's/ruby\.exe$/ruby/' bin/*
-
-# Precompile assets
-#secret key base
-ARG SECRET_KEY_BASE=c973675f25193c0e71233a8b08d95d9413a1d885d9bc3e6809890e71bdae500343d9027688634642bb1f9c7ef15478e33325f3e294c215a7daed7fa758c9c62d
 
 # Final stage for app image
 FROM base
@@ -65,6 +64,3 @@ ENTRYPOINT ["/rails/bin/docker-entrypoint"]
 # Start the server by default, this can be overwritten at runtime
 EXPOSE 3000
 CMD ["./bin/rails", "server"]
-
-
-
